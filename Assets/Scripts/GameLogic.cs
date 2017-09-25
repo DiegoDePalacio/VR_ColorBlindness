@@ -9,9 +9,9 @@ public class GameLogic : MonoBehaviour
     private int ripeApples; //total ripe apples
     private int collectedApples; //ripe apples collected
 
-    public Text signText;
+    public Text signText; //live game info on sign
 
-    private float timeLeft = 60.0f;
+    private float timeLeft = 60.0f; //countdown once game starts
 
     // Use this for initialization
     void Start()
@@ -26,9 +26,10 @@ public class GameLogic : MonoBehaviour
 
     }
 
-    //triggered on click:
-    //if apple is ripe, add to collectedApples and positive audio feedback
-    //else give negative audio feedback
+    // Triggered on click:
+    // If apple is ripe, increment collectedApples, give positive audio feedback,
+    // and update updateHUD.
+    // Else give negative audio feedback.
     public void OnAppleClick(GameObject other)
     {
         if (other.gameObject.CompareTag("RipeApple"))
@@ -38,6 +39,8 @@ public class GameLogic : MonoBehaviour
         }
     }
 
+    // Updates sign text.
+    // If player collects all apples, end game.
     void UpdateHUD()
     {
         signText.text = "Ripe apples collected:" + collectedApples.ToString();
@@ -46,6 +49,12 @@ public class GameLogic : MonoBehaviour
         {
             signText.text = "You collected all the ripe apples!";
         }
+    }
+
+    // Starts countdown. Maybe makes OnAppleClick Active?
+    void StartGame()
+    {
+
     }
 
 }
