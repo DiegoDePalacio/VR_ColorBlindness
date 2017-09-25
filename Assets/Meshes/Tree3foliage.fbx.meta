@@ -1,0 +1,250 @@
+fileFormatVersion: 2
+guid: bc0e719f56a16ed44ba61d3aadaedf4d
+timeCreated: 1506374566
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: group10
+    100002: group7
+    100004: group8
+    100006: group9
+    100008: pSolid1
+    100010: pSolid1 1
+    100012: pSolid1 2
+    100014: pSolid1 3
+    100016: pSolid10
+    100018: pSolid10 1
+    100020: pSolid2
+    100022: pSolid2 1
+    100024: pSolid2 2
+    100026: pSolid2 3
+    100028: pSolid3
+    100030: pSolid3 1
+    100032: pSolid3 2
+    100034: pSolid3 3
+    100036: pSolid4
+    100038: pSolid4 1
+    100040: pSolid4 2
+    100042: pSolid4 3
+    100044: pSolid5
+    100046: pSolid5 1
+    100048: pSolid5 2
+    100050: pSolid5 3
+    100052: pSolid6
+    100054: pSolid6 1
+    100056: pSolid6 2
+    100058: pSolid6 3
+    100060: pSolid7
+    100062: pSolid7 1
+    100064: pSolid7 2
+    100066: pSolid7 3
+    100068: pSolid8
+    100070: pSolid8 1
+    100072: pSolid8 2
+    100074: pSolid8 3
+    100076: pSolid9
+    100078: pSolid9 1
+    100080: pSolid9 2
+    100082: pSolid9 3
+    100084: transform110
+    100086: transform111
+    100088: transform112
+    100090: transform113
+    100092: transform114
+    100094: transform115
+    100096: transform116
+    100098: transform117
+    100100: transform118
+    100102: transform119
+    100104: transform120
+    100106: transform121
+    100108: transform122
+    100110: transform123
+    100112: transform124
+    100114: transform125
+    100116: transform126
+    100118: transform127
+    100120: transform128
+    100122: transform129
+    100124: transform130
+    100126: transform131
+    100128: transform132
+    100130: transform133
+    100132: transform134
+    100134: transform135
+    100136: transform136
+    100138: transform137
+    100140: transform138
+    100142: transform139
+    100144: transform140
+    100146: transform141
+    100148: transform142
+    100150: transform143
+    100152: transform144
+    100154: transform145
+    100156: transform146
+    100158: transform147
+    100160: //RootNode
+    100162: tree3foliage
+    400000: group10
+    400002: group7
+    400004: group8
+    400006: group9
+    400008: pSolid1
+    400010: pSolid1 1
+    400012: pSolid1 2
+    400014: pSolid1 3
+    400016: pSolid10
+    400018: pSolid10 1
+    400020: pSolid2
+    400022: pSolid2 1
+    400024: pSolid2 2
+    400026: pSolid2 3
+    400028: pSolid3
+    400030: pSolid3 1
+    400032: pSolid3 2
+    400034: pSolid3 3
+    400036: pSolid4
+    400038: pSolid4 1
+    400040: pSolid4 2
+    400042: pSolid4 3
+    400044: pSolid5
+    400046: pSolid5 1
+    400048: pSolid5 2
+    400050: pSolid5 3
+    400052: pSolid6
+    400054: pSolid6 1
+    400056: pSolid6 2
+    400058: pSolid6 3
+    400060: pSolid7
+    400062: pSolid7 1
+    400064: pSolid7 2
+    400066: pSolid7 3
+    400068: pSolid8
+    400070: pSolid8 1
+    400072: pSolid8 2
+    400074: pSolid8 3
+    400076: pSolid9
+    400078: pSolid9 1
+    400080: pSolid9 2
+    400082: pSolid9 3
+    400084: transform110
+    400086: transform111
+    400088: transform112
+    400090: transform113
+    400092: transform114
+    400094: transform115
+    400096: transform116
+    400098: transform117
+    400100: transform118
+    400102: transform119
+    400104: transform120
+    400106: transform121
+    400108: transform122
+    400110: transform123
+    400112: transform124
+    400114: transform125
+    400116: transform126
+    400118: transform127
+    400120: transform128
+    400122: transform129
+    400124: transform130
+    400126: transform131
+    400128: transform132
+    400130: transform133
+    400132: transform134
+    400134: transform135
+    400136: transform136
+    400138: transform137
+    400140: transform138
+    400142: transform139
+    400144: transform140
+    400146: transform141
+    400148: transform142
+    400150: transform143
+    400152: transform144
+    400154: transform145
+    400156: transform146
+    400158: transform147
+    400160: //RootNode
+    400162: tree3foliage
+    2300000: tree3foliage
+    3300000: tree3foliage
+    4300000: tree3foliage
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 25
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

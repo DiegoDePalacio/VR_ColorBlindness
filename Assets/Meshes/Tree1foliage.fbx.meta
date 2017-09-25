@@ -1,0 +1,166 @@
+fileFormatVersion: 2
+guid: 2c5052179b2c0b9459d39af5d8fb9a3e
+timeCreated: 1506374566
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: group1
+    100002: group2
+    100004: pSolid1
+    100006: pSolid1 1
+    100008: pSolid2
+    100010: pSolid2 1
+    100012: pSolid3
+    100014: pSolid3 1
+    100016: pSolid4
+    100018: pSolid4 1
+    100020: pSolid5
+    100022: pSolid5 1
+    100024: pSolid6
+    100026: pSolid6 1
+    100028: pSolid7
+    100030: pSolid7 1
+    100032: pSolid8
+    100034: pSolid8 1
+    100036: pSolid9
+    100038: pSolid9 1
+    100040: transform184
+    100042: transform185
+    100044: transform186
+    100046: transform187
+    100048: transform188
+    100050: transform189
+    100052: transform190
+    100054: transform191
+    100056: transform192
+    100058: transform193
+    100060: transform194
+    100062: transform195
+    100064: transform196
+    100066: transform197
+    100068: transform198
+    100070: transform199
+    100072: transform200
+    100074: transform201
+    100076: //RootNode
+    100078: tree1foliage
+    400000: group1
+    400002: group2
+    400004: pSolid1
+    400006: pSolid1 1
+    400008: pSolid2
+    400010: pSolid2 1
+    400012: pSolid3
+    400014: pSolid3 1
+    400016: pSolid4
+    400018: pSolid4 1
+    400020: pSolid5
+    400022: pSolid5 1
+    400024: pSolid6
+    400026: pSolid6 1
+    400028: pSolid7
+    400030: pSolid7 1
+    400032: pSolid8
+    400034: pSolid8 1
+    400036: pSolid9
+    400038: pSolid9 1
+    400040: transform184
+    400042: transform185
+    400044: transform186
+    400046: transform187
+    400048: transform188
+    400050: transform189
+    400052: transform190
+    400054: transform191
+    400056: transform192
+    400058: transform193
+    400060: transform194
+    400062: transform195
+    400064: transform196
+    400066: transform197
+    400068: transform198
+    400070: transform199
+    400072: transform200
+    400074: transform201
+    400076: //RootNode
+    400078: tree1foliage
+    2300000: tree1foliage
+    3300000: tree1foliage
+    4300000: tree1foliage
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 25
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
