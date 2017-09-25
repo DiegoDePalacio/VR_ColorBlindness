@@ -11,6 +11,8 @@ public class GameLogic : MonoBehaviour
 
     public Text signText; //live game info on sign
 
+    bool gameRunning;
+
     private float timeLeft = 60.0f; //countdown once game starts
 
     // Use this for initialization
@@ -18,11 +20,19 @@ public class GameLogic : MonoBehaviour
     {
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
         collectedApples = 0;
+        gameRunning = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (gameRunning == true)
+        {
+            while (timeLeft > 0.0f)
+            {
+                timeLeft--;
+            }
+        }
 
     }
 
@@ -43,18 +53,23 @@ public class GameLogic : MonoBehaviour
     // If player collects all apples, end game.
     void UpdateHUD()
     {
-        signText.text = "Ripe apples collected:" + collectedApples.ToString();
-
-        if (collectedApples == ripeApples)
+        signText.text = "Only collect the ripe apples!";
+        if (gameRunning == true)
         {
-            signText.text = "You collected all the ripe apples!";
+            signText.text = "Ripe apples collected:" + collectedApples.ToString();
+
+            if (collectedApples == ripeApples)
+            {
+                signText.text = "You collected all the ripe apples!";
+            }
         }
     }
 
-    // Starts countdown. Maybe makes OnAppleClick Active?
+    // Starts countdown. Maybe makes apples collectable?
     void StartGame()
     {
-
+        gameRunning = true;
+        UpdateHUD();
     }
 
 }
