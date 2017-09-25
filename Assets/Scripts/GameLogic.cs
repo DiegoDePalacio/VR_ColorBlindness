@@ -15,7 +15,7 @@ public class GameLogic : MonoBehaviour
 
     private float timeLeft = 60.0f; //countdown once game starts
 
-    // Use this for initialization
+    // Use this for initialization 
     void Start()
     {
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
