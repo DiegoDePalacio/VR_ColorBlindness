@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Wilberforce;
 
 public class GameLogic : MonoBehaviour
 {
@@ -24,13 +25,16 @@ public class GameLogic : MonoBehaviour
 
     public float timeLeft; //countdown once game starts
 
+    public Colorblind colorBlindSetting;
+
     // Use this for initialization 
     void Start()
     {
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
+        colorBlindSetting = mainCamera.GetComponent<Colorblind>();
         GameObject[] spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
         int i = 0;
-        foreach (GameObject spawn in spawns)
+        foreach (GameObject spawn in spawns) //assign spawn transforms to spawnPoints array
         {
             spawnPoints[i] = spawn.transform;
             i++;
@@ -50,6 +54,11 @@ public class GameLogic : MonoBehaviour
         if (gameRunning == true)
         {
             DecreaseTime();
+            if(collectedApples > ripeApples / 3) // if the player has collected more than 1/3 of the red apples, switch the colorblind setting to 2: Deuteranopia
+            {
+                // colorBlindSetting.Type = Mathf.RoundToInt(Random.Range(0.0f, 3.0f));
+                colorBlindSetting.Type = 2;
+            }
         }
         UpdateHUD();
 
