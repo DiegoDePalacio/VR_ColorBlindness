@@ -6,6 +6,8 @@ TagManager:
   tags:
   - RipeApple
   - UnripeApple
+  - SceneLogic
+  - SpawnPoint
   layers:
   - Default
   - TransparentFX

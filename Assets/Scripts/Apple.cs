@@ -7,7 +7,7 @@ public class Apple : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        gameManager = GameObject.FindGameObjectWithTag("SceneLogic");
 	}
 	
 	// Update is called once per frame
