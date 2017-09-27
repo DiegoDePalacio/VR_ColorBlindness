@@ -14,6 +14,9 @@ public class GameLogic : MonoBehaviour
     public GameObject ripeApple;
     public GameObject unripeApple;
 
+    public GameObject playCanvas;
+    public GameObject explanationCanvas;
+
     public Text signText; //live game info on sign
     public Text timerText; //live timer info on sign
 
@@ -44,7 +47,7 @@ public class GameLogic : MonoBehaviour
         SpawnApples(spawnPoints);
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
         collectedApples = 0;
-        StartGame();
+        //StartGame();
 
     }
 
@@ -105,8 +108,9 @@ public class GameLogic : MonoBehaviour
     }
 
     // Starts countdown. Maybe makes apples collectable?
-    void StartGame()
+    public void StartGame()
     {
+        playCanvas.SetActive(false);
         gameRunning = true;
         UpdateHUD();
     }
@@ -136,6 +140,20 @@ public class GameLogic : MonoBehaviour
                 Instantiate(ripeApple, spawnPoint.position, spawnPoint.rotation);
             }
         }
+    }
+
+    public void NextSlide(string slideName)
+    {
+        if (slideName == "PlaySlide")
+        {
+            explanationCanvas.SetActive(false);
+            playCanvas.SetActive(true);
+        }
+    }
+
+    public void OpenLink(string link)
+    {
+        Application.OpenURL(link);
     }
 
 }
