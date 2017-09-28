@@ -8,6 +8,10 @@ TagManager:
   - UnripeApple
   - SceneLogic
   - SpawnPoint
+  - SpawnPointApple
+  - SpawnPointFlower
+  - FlowerYellow
+  - FlowerBlue
   layers:
   - Default
   - TransparentFX
