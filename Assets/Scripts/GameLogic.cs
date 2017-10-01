@@ -16,6 +16,7 @@ public class GameLogic : MonoBehaviour
 
     public GameObject playCanvas;
     public GameObject explanationCanvas;
+    public GameObject parkSign;
 
     public Text signText; //live game info on sign
     public Text timerText; //live timer info on sign
@@ -110,7 +111,7 @@ public class GameLogic : MonoBehaviour
     // Starts countdown. Maybe makes apples collectable?
     public void StartGame()
     {
-        playCanvas.SetActive(false);
+        parkSign.SetActive(false);
         gameRunning = true;
         UpdateHUD();
     }
