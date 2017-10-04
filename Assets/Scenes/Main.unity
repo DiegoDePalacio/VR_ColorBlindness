@@ -475,6 +475,21 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 463285ecd6702471a909ba810832bf0e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1381182010 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1237716041399088, guid: ecab21568ea943a47a739db301f8a7b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1058260489}
+--- !u!1 &1838615320 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1464949383818772, guid: ecab21568ea943a47a739db301f8a7b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1058260489}
+--- !u!1 &1872338841 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1518838165746098, guid: ecab21568ea943a47a739db301f8a7b8,
+    type: 2}
+  m_PrefabInternal: {fileID: 1058260489}
 --- !u!1001 &2014666637
 Prefab:
   m_ObjectHideFlags: 0
@@ -513,6 +528,37 @@ Prefab:
     - target: {fileID: 4083783865143612, guid: 20c0e4c01532e004a92672d5fefb39a9, type: 2}
       propertyPath: m_RootOrder
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114106072263090648, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: ripeApple
+      value: 
+      objectReference: {fileID: 1997418502142556, guid: 000bbe3586a2a0b4cb382bf4d3532a79,
+        type: 2}
+    - target: {fileID: 114106072263090648, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: unripeApple
+      value: 
+      objectReference: {fileID: 1434963049425432, guid: 474465f5860389746b82cb7f5ec69a5a,
+        type: 2}
+    - target: {fileID: 114106072263090648, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: playCanvas
+      value: 
+      objectReference: {fileID: 1872338841}
+    - target: {fileID: 114106072263090648, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: explanationCanvas
+      value: 
+      objectReference: {fileID: 1381182010}
+    - target: {fileID: 114106072263090648, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: parkSign
+      value: 
+      objectReference: {fileID: 1838615320}
+    - target: {fileID: 1614013238201942, guid: 20c0e4c01532e004a92672d5fefb39a9, type: 2}
+      propertyPath: m_TagString
+      value: SceneLogic
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 20c0e4c01532e004a92672d5fefb39a9, type: 2}
