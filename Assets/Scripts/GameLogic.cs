@@ -10,7 +10,7 @@ public class GameLogic : MonoBehaviour
     private int ripeApples; //total ripe apples
     private int collectedApples; //ripe apples collected
 
-    public Transform[] spawnPoints;
+    //public Transform[] spawnPoints;
     public GameObject ripeApple;
     public GameObject unripeApple;
 
@@ -36,16 +36,17 @@ public class GameLogic : MonoBehaviour
     {
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         colorBlindSetting = mainCamera.GetComponent<Colorblind>();
-        GameObject[] spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        int i = 0;
-        foreach (GameObject spawn in spawns) //assign spawn transforms to spawnPoints array
-        {
-            spawnPoints[i] = spawn.transform;
-            i++;
-        }
+        // Deprecated by GenerateScene.cs
+        //GameObject[] spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        //int i = 0;
+        //foreach (GameObject spawn in spawns) //assign spawn transforms to spawnPoints array
+        //{
+        //    spawnPoints[i] = spawn.transform;
+        //    i++;
+        //}
        
         sound = mainCamera.GetComponent<AudioSource>();
-        SpawnApples(spawnPoints);
+        //SpawnApples(spawnPoints);
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
         collectedApples = 0;
         //StartGame();
@@ -128,20 +129,20 @@ public class GameLogic : MonoBehaviour
         UpdateHUD();
     }
 
-    public void SpawnApples(Transform[] spawnPoints)
-    {
-        foreach (Transform spawnPoint in spawnPoints)
-        {
-            float typeOfApple = Random.value;
-            if(typeOfApple < 0.5f)
-            {
-                Instantiate(unripeApple, spawnPoint.position, spawnPoint.rotation);
-            } else
-            {
-                Instantiate(ripeApple, spawnPoint.position, spawnPoint.rotation);
-            }
-        }
-    }
+    //public void SpawnApples(Transform[] spawnPoints)
+    //{
+    //    foreach (Transform spawnPoint in spawnPoints)
+    //    {
+    //        float typeOfApple = Random.value;
+    //        if(typeOfApple < 0.5f)
+    //        {
+    //            Instantiate(unripeApple, spawnPoint.position, spawnPoint.rotation);
+    //        } else
+    //        {
+    //            Instantiate(ripeApple, spawnPoint.position, spawnPoint.rotation);
+    //        }
+    //    }
+    //}
 
     public void NextSlide(string slideName)
     {
