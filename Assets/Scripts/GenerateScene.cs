@@ -14,12 +14,12 @@ public class GenerateScene : MonoBehaviour {
     // Use this for initialization
     void Start() {
 
-        spawnApples();
-        spawnFlowers();
+        //spawnApples();
+        //spawnFlowers();
 
     }
 
-    void spawnFlowers() {
+    public void spawnFlowers() {
         if (respawnsFlower.Length < 1)
         {
             respawnsFlower = GameObject.FindGameObjectsWithTag("SpawnPointFlower");
@@ -41,7 +41,7 @@ public class GenerateScene : MonoBehaviour {
         }
     }
 
-    void spawnApples() {
+    public void spawnApples() {
         if (respawnsApple.Length < 1)
         {
             respawnsApple = GameObject.FindGameObjectsWithTag("SpawnPointApple");
@@ -61,6 +61,11 @@ public class GenerateScene : MonoBehaviour {
             }
 
         }
+    }
+
+    public void DestroyFruit()
+    {
+       // GameObject[] fruit = 
     }
 	
 }

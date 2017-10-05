@@ -17,7 +17,7 @@ public class Apple : MonoBehaviour {
 
     public void EatApple()
     {
-        GameLogic game = gameManager.GetComponent<GameLogic>();
+        GameLogic2 game = gameManager.GetComponent<GameLogic2>();
         game.OnAppleClick(gameObject);
         Destroy(gameObject);
     }
