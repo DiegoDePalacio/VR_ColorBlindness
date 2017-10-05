@@ -5,11 +5,11 @@ using Wilberforce;
 using TMPro;
 
 public class GameLogic2 : MonoBehaviour {
-    private float ripeApples; //total ripe apples
-    private float collectedApples; //ripe apples collected
+    public int ripeApples; //total ripe apples
+    public int collectedApples; //ripe apples collected
 
-    public float normalScore = 0.0f;
-    public float colorblindScore = 0.0f;
+    public int normalScore = 0;
+    public int colorblindScore = 0;
 
     public GenerateScene fruitGenerator;
 
@@ -90,6 +90,7 @@ public class GameLogic2 : MonoBehaviour {
 
         //set possible score
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
+        Debug.Log("Ripe Apples: " + ripeApples);
 
         //set timer
         timeRemaining = timeSetting;
@@ -132,7 +133,7 @@ public class GameLogic2 : MonoBehaviour {
         level++;
     }
 
-    public void StopGame(int level)
+    public void StopGame(int endedLevel)
     {
         gameRunning = false;
 
@@ -143,7 +144,7 @@ public class GameLogic2 : MonoBehaviour {
         scoreSign.SetActive(false);
         timeSign.SetActive(false);
 
-        if (level == 1)
+        if (endedLevel == 1)
         {
             normalScore = collectedApples;
             Debug.Log("Normal Score: " + normalScore);
@@ -153,7 +154,7 @@ public class GameLogic2 : MonoBehaviour {
             canvasObjs[2].SetActive(true);
             canvasObjs[3].SetActive(false);
         }
-        else if (level == 2)
+        else if (endedLevel == 2)
         {
             colorblindScore = collectedApples;
             Debug.Log("Colorblind Score: " + colorblindScore);
@@ -162,10 +163,14 @@ public class GameLogic2 : MonoBehaviour {
             canvasObjs[1].SetActive(false);
             canvasObjs[2].SetActive(false);
             canvasObjs[3].SetActive(true);
+
+            //turn on normal vision
+            Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
+            colorblindsetting.Type = 0;
         }
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if (gameRunning)
         {
@@ -175,6 +180,7 @@ public class GameLogic2 : MonoBehaviour {
         {
             Debug.Log("Game has stopped");
         }
+        //UpdateTimer();
     }
 
     void DecreaseTime()
@@ -188,16 +194,18 @@ public class GameLogic2 : MonoBehaviour {
             StopGame(level);
         }
 
-        UpdateHUD();
+       UpdateTimer();
     }
 
-    void UpdateHUD()
+    void UpdateTimer()
     {
         timeText.SetText("Time: " + timeRemaining.ToString("F2"));
-        string score = "Score:" + collectedApples;
-        Debug.Log(score);
-        scoreText.SetText(score);
-        
+    }
+
+    void UpdateScore()
+    {
+        Debug.Log("Score: " + collectedApples);
+        scoreText.SetText("Score: " + collectedApples);
     }
 
     // Triggered on click:
@@ -213,6 +221,11 @@ public class GameLogic2 : MonoBehaviour {
             sound.clip = yum;
             sound.Play();*/
             collectedApples++;
+            if (collectedApples == ripeApples)
+            {
+                Debug.Log("All apples collected");
+                StopGame(level);
+            }
         }
         else if (other.gameObject.CompareTag("UnripeApple"))
         {
@@ -224,7 +237,7 @@ public class GameLogic2 : MonoBehaviour {
             //assign some sort of penalty, like decreasing time
         }
 
-        UpdateHUD();
+        UpdateScore();
     }
 
     public void OpenLink(string link)
