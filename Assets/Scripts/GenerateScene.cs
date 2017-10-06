@@ -14,9 +14,6 @@ public class GenerateScene : MonoBehaviour {
     // Use this for initialization
     void Start() {
 
-        //spawnApples();
-        //spawnFlowers();
-
     }
 
     public void spawnFlowers() {
@@ -63,9 +60,17 @@ public class GenerateScene : MonoBehaviour {
         }
     }
 
-    public void DestroyFruit()
+    public void destroyFruit()
     {
-       // GameObject[] fruit = 
+        GameObject[] ripeFruitToDestroy = GameObject.FindGameObjectsWithTag("RipeApple");
+        GameObject[] unripeFruitToDestroy = GameObject.FindGameObjectsWithTag("UnripeApple");
+        for(int i = 0; i < ripeFruitToDestroy.Length; i++) {
+            Destroy(ripeFruitToDestroy[i]); 
+        }
+        for (int i = 0; i < unripeFruitToDestroy.Length; i++)
+        {
+            Destroy(unripeFruitToDestroy[i]);
+        }
     }
 	
 }

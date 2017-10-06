@@ -5,8 +5,12 @@ using Wilberforce;
 using TMPro;
 
 public class GameLogic2 : MonoBehaviour {
+
     public int ripeApples; //total ripe apples
     public int collectedApples; //ripe apples collected
+
+    public GameObject playCanvas;
+    public GameObject explanationCanvas;
 
     public int normalScore = 0;
     public int colorblindScore = 0;
@@ -25,9 +29,9 @@ public class GameLogic2 : MonoBehaviour {
     public GameObject parkSign; // info screen sign
     public GameObject[] canvasObjs; //all canvas gameobjects
 
-    public AudioSource sound; // Audio source on player camera
-    public AudioClip yuck; // success noise
-    public AudioClip yum; // failure noise
+    public GameObject yuckObject; // fail noise
+    public GameObject yumObject; // success noise
+    
 
     public Camera mainCamera;
 
@@ -38,8 +42,15 @@ public class GameLogic2 : MonoBehaviour {
 
     public int level = 0;
 
+    //private vars
+    private AudioSource yuck;
+    private AudioSource yum;
+
     void Start()
     {
+        yum = yumObject.GetComponent<AudioSource>();
+        yuck = yuckObject.GetComponent<AudioSource>();
+
         /*timeSign = GameObject.FindGameObjectWithTag("SignTime");
         timeText = timeSign.GetComponentInChildren<TextMeshProUGUI>();
         //timeCanvas = timeSign.GetComponent<Canvas>();
@@ -51,7 +62,6 @@ public class GameLogic2 : MonoBehaviour {
         //scoreText = scoreCanvas.GetComponent<TextMeshProUGUI>();*/
 
         StartGame();
-       // sound = mainCamera.GetComponent<AudioSource>();
 
     }
 
@@ -63,7 +73,7 @@ public class GameLogic2 : MonoBehaviour {
         timeSign.SetActive(false);
 
         //show park sign
-        parkSign.SetActive(true);
+        parkSign.SetActive(true); //sign play button starts gameNormal
 
         //show explanation canvas
         canvasObjs[0].SetActive(true);
@@ -71,16 +81,11 @@ public class GameLogic2 : MonoBehaviour {
         canvasObjs[2].SetActive(false);
         canvasObjs[3].SetActive(false);
 
-
-        //show instructions/play canvas
-
-        
-
-        //play game normal
     }
 
     public void gameNormal()
     {
+
         //generate fruit
         fruitGenerator.spawnApples();
         fruitGenerator.spawnFlowers();
@@ -90,7 +95,6 @@ public class GameLogic2 : MonoBehaviour {
 
         //set possible score
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
-        Debug.Log("Ripe Apples: " + ripeApples);
 
         //set timer
         timeRemaining = timeSetting;
@@ -108,6 +112,7 @@ public class GameLogic2 : MonoBehaviour {
 
     public void gameColorblind()
     {
+
         //remove old fruit
         collectedApples = 0;
         
@@ -135,6 +140,16 @@ public class GameLogic2 : MonoBehaviour {
 
     public void StopGame(int endedLevel)
     {
+        if (level==1)//this is normal mode
+        {
+            normalScore = collectedApples;
+        }
+        else {//this is colorblind mode
+            colorblindScore = collectedApples;
+        }
+
+        fruitGenerator.destroyFruit();
+
         gameRunning = false;
 
         //turn onpark sign
@@ -147,7 +162,7 @@ public class GameLogic2 : MonoBehaviour {
         if (endedLevel == 1)
         {
             normalScore = collectedApples;
-            Debug.Log("Normal Score: " + normalScore);
+
             //show red-green canvas
             canvasObjs[0].SetActive(false);
             canvasObjs[1].SetActive(false);
@@ -157,7 +172,7 @@ public class GameLogic2 : MonoBehaviour {
         else if (endedLevel == 2)
         {
             colorblindScore = collectedApples;
-            Debug.Log("Colorblind Score: " + colorblindScore);
+
             //show exit canvas
             canvasObjs[0].SetActive(false);
             canvasObjs[1].SetActive(false);
@@ -174,13 +189,8 @@ public class GameLogic2 : MonoBehaviour {
     {
         if (gameRunning)
         {
-            Debug.Log("Game is running");
             DecreaseTime();
-        } else
-        {
-            Debug.Log("Game has stopped");
-        }
-        //UpdateTimer();
+        } 
     }
 
     void DecreaseTime()
@@ -204,7 +214,6 @@ public class GameLogic2 : MonoBehaviour {
 
     void UpdateScore()
     {
-        Debug.Log("Score: " + collectedApples);
         scoreText.SetText("Score: " + collectedApples);
     }
 
@@ -217,9 +226,8 @@ public class GameLogic2 : MonoBehaviour {
         if (other.gameObject.CompareTag("RipeApple"))
         {
             // play "yum" noise
-            /*sound.enabled = true;
-            sound.clip = yum;
-            sound.Play();*/
+            yum.Play();
+
             collectedApples++;
             if (collectedApples == ripeApples)
             {
@@ -230,14 +238,21 @@ public class GameLogic2 : MonoBehaviour {
         else if (other.gameObject.CompareTag("UnripeApple"))
         {
             // play "yuck" noise
-            /*sound.enabled = true;
-            sound.clip = yuck;
-            sound.Play();*/
+            yuck.Play();
 
             //assign some sort of penalty, like decreasing time
         }
 
         UpdateScore();
+    }
+
+    public void NextSlide(string slideName)
+    {
+        if (slideName == "PlaySlide")
+        {
+            explanationCanvas.SetActive(false);
+            playCanvas.SetActive(true);
+        }
     }
 
     public void OpenLink(string link)
