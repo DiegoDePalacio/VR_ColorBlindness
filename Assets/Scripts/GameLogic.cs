@@ -6,13 +6,11 @@ using Wilberforce;
 
 public class GameLogic : MonoBehaviour
 {
-
     private int ripeApples; //total ripe apples
     private int collectedApples; //ripe apples collected
 
     public int fractionOfApples;
 
-    //public Transform[] spawnPoints;
     public GameObject ripeApple;
     public GameObject unripeApple;
 
@@ -38,21 +36,10 @@ public class GameLogic : MonoBehaviour
     {
         GameObject mainCamera = GameObject.FindGameObjectWithTag("MainCamera");
         colorBlindSetting = mainCamera.GetComponent<Colorblind>();
-        // Deprecated by GenerateScene.cs
-        //GameObject[] spawns = GameObject.FindGameObjectsWithTag("SpawnPoint");
-        //int i = 0;
-        //foreach (GameObject spawn in spawns) //assign spawn transforms to spawnPoints array
-        //{
-        //    spawnPoints[i] = spawn.transform;
-        //    i++;
-        //}
        
         sound = mainCamera.GetComponent<AudioSource>();
-        //SpawnApples(spawnPoints);
         ripeApples = GameObject.FindGameObjectsWithTag("RipeApple").Length;
         collectedApples = 0;
-        //StartGame();
-
     }
 
     // Update is called once per frame //FixedUpdate is called once per second
@@ -63,12 +50,10 @@ public class GameLogic : MonoBehaviour
             DecreaseTime();
             if(collectedApples > ripeApples / fractionOfApples) // if the player has collected more than 1/3 of the red apples, switch the colorblind setting to 2: Deuteranopia
             {
-                // colorBlindSetting.Type = Mathf.RoundToInt(Random.Range(0.0f, 3.0f));
                 colorBlindSetting.Type = 2;
             }
         }
         UpdateHUD();
-
     }
 
     // Triggered on click:
@@ -88,7 +73,7 @@ public class GameLogic : MonoBehaviour
             sound.clip = yuck;
             sound.Play();
 
-            //assign some sort of penalty, like decreasing time
+            // TODO: assign some sort of penalty, like decreasing time
         }
 
         UpdateHUD();
@@ -131,21 +116,6 @@ public class GameLogic : MonoBehaviour
         UpdateHUD();
     }
 
-    //public void SpawnApples(Transform[] spawnPoints)
-    //{
-    //    foreach (Transform spawnPoint in spawnPoints)
-    //    {
-    //        float typeOfApple = Random.value;
-    //        if(typeOfApple < 0.5f)
-    //        {
-    //            Instantiate(unripeApple, spawnPoint.position, spawnPoint.rotation);
-    //        } else
-    //        {
-    //            Instantiate(ripeApple, spawnPoint.position, spawnPoint.rotation);
-    //        }
-    //    }
-    //}
-
     public void NextSlide(string slideName)
     {
         if (slideName == "PlaySlide")
@@ -159,5 +129,4 @@ public class GameLogic : MonoBehaviour
     {
         Application.OpenURL(link);
     }
-
 }

@@ -32,7 +32,6 @@ public class GameLogic2 : MonoBehaviour {
     public GameObject yuckObject; // fail noise
     public GameObject yumObject; // success noise
     
-
     public Camera mainCamera;
 
     public bool gameRunning;
@@ -51,23 +50,13 @@ public class GameLogic2 : MonoBehaviour {
         yum = yumObject.GetComponent<AudioSource>();
         yuck = yuckObject.GetComponent<AudioSource>();
 
-        /*timeSign = GameObject.FindGameObjectWithTag("SignTime");
-        timeText = timeSign.GetComponentInChildren<TextMeshProUGUI>();
-        //timeCanvas = timeSign.GetComponent<Canvas>();
-        //timeText = timeCanvas.GetComponent<TextMeshProUGUI>();
-
-        scoreSign = GameObject.FindGameObjectWithTag("SignScore");
-        scoreText = scoreSign.GetComponentInChildren<TextMeshProUGUI>();
-        //scoreCanvas = scoreSign.GetComponent<Canvas>();
-        //scoreText = scoreCanvas.GetComponent<TextMeshProUGUI>();*/
-
         StartGame();
-
     }
 
     void StartGame()
     {
         level = 0;
+
         //disable timer/score signs
         scoreSign.SetActive(false);
         timeSign.SetActive(false);
@@ -80,12 +69,10 @@ public class GameLogic2 : MonoBehaviour {
         canvasObjs[1].SetActive(false);
         canvasObjs[2].SetActive(false);
         canvasObjs[3].SetActive(false);
-
     }
 
     public void gameNormal()
     {
-
         //generate fruit
         fruitGenerator.spawnApples();
         fruitGenerator.spawnFlowers();
@@ -112,7 +99,6 @@ public class GameLogic2 : MonoBehaviour {
 
     public void gameColorblind()
     {
-
         //remove old fruit
         collectedApples = 0;
         
@@ -240,7 +226,7 @@ public class GameLogic2 : MonoBehaviour {
             // play "yuck" noise
             yuck.Play();
 
-            //assign some sort of penalty, like decreasing time
+            // TODO: assign some sort of penalty, like decreasing time
         }
 
         UpdateScore();
@@ -259,5 +245,4 @@ public class GameLogic2 : MonoBehaviour {
     {
         Application.OpenURL(link);
     }
-
 }

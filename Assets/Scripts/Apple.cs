@@ -6,13 +6,9 @@ public class Apple : MonoBehaviour {
     public GameObject gameManager;
 
 	// Use this for initialization
-	void Start () {
+	void Start ()
+    {
         gameManager = GameObject.FindGameObjectWithTag("SceneLogic");
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
 	}
 
     public void EatApple()
