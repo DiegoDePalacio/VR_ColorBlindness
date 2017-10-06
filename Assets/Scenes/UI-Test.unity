@@ -610,7 +610,7 @@ Prefab:
     - target: {fileID: 114400843446354642, guid: be1692d9f7dc47843869e615e057fdc5,
         type: 2}
       propertyPath: raycastMode
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 82139545112891346, guid: be1692d9f7dc47843869e615e057fdc5,
         type: 2}
