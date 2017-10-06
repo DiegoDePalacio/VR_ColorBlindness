@@ -194,6 +194,15 @@ public class GameLogic2 : MonoBehaviour {
         } 
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Android close icon or back button tapped.
+            Application.Quit();
+        }
+    }
+
     void DecreaseTime()
     {
         if (timeRemaining > 0.0f)
