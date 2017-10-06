@@ -20,6 +20,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4083783865143612}
   - component: {fileID: 114106072263090648}
+  - component: {fileID: 114857299834543766}
+  - component: {fileID: 114120570953105988}
   m_Layer: 0
   m_Name: sceneLogic
   m_TagString: Untagged
@@ -46,7 +48,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614013238201942}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 327bbaac928f43e4eae90fb4133def4d, type: 3}
   m_Name: 
@@ -54,6 +56,9 @@ MonoBehaviour:
   spawnPoints: []
   ripeApple: {fileID: 0}
   unripeApple: {fileID: 0}
+  playCanvas: {fileID: 0}
+  explanationCanvas: {fileID: 0}
+  parkSign: {fileID: 0}
   signText: {fileID: 0}
   timerText: {fileID: 0}
   sound: {fileID: 82139545112891346, guid: be1692d9f7dc47843869e615e057fdc5, type: 2}
@@ -61,3 +66,52 @@ MonoBehaviour:
   yum: {fileID: 8300000, guid: 5dad009ee5b68324796a5c25c941027b, type: 3}
   gameRunning: 0
   timeLeft: 240
+  colorBlindSetting: {fileID: 0}
+--- !u!114 &114120570953105988
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614013238201942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6007c5352715dd4f96ee567cb2edd1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  greenApple: {fileID: 1434963049425432, guid: 474465f5860389746b82cb7f5ec69a5a, type: 2}
+  redApple: {fileID: 1997418502142556, guid: 000bbe3586a2a0b4cb382bf4d3532a79, type: 2}
+  blueFlower: {fileID: 1073851210432430, guid: 1ea3ccac61f53ed47980e419033b0dac, type: 2}
+  yellowFlower: {fileID: 1648183975244920, guid: 5272f2599ef58704bad854517fc22a70,
+    type: 2}
+  respawnsApple: []
+  respawnsFlower: []
+--- !u!114 &114857299834543766
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614013238201942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a417ecbde9abd0345987581f76c34e88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fruitGenerator: {fileID: 114120570953105988}
+  scoreSign: {fileID: 1763447537283684, guid: 6a0fd5d575ea48444b1c84ef5153de36, type: 2}
+  timeSign: {fileID: 1246779243205392, guid: 27b7a635668ab8d4bb551faf7b5d267c, type: 2}
+  scoreCanvas: {fileID: 223141147553196136, guid: 6a0fd5d575ea48444b1c84ef5153de36,
+    type: 2}
+  timeCanvas: {fileID: 223054552738452384, guid: 27b7a635668ab8d4bb551faf7b5d267c,
+    type: 2}
+  timeText: {fileID: 0}
+  scoreText: {fileID: 0}
+  parkSign: {fileID: 1464949383818772, guid: ecab21568ea943a47a739db301f8a7b8, type: 2}
+  canvasObjs: []
+  sound: {fileID: 0}
+  yuck: {fileID: 0}
+  yum: {fileID: 0}
+  mainCamera: {fileID: 0}
+  gameRunning: 0
+  timeSetting: 10
+  timeRemaining: 0
+  level: 0

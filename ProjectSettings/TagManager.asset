@@ -12,6 +12,8 @@ TagManager:
   - SpawnPointFlower
   - FlowerYellow
   - FlowerBlue
+  - SignTime
+  - SignScore
   layers:
   - Default
   - TransparentFX
