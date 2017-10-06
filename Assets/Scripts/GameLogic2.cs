@@ -9,6 +9,7 @@ public class GameLogic2 : MonoBehaviour {
     public int ripeApples; //total ripe apples
     public int collectedApples; //ripe apples collected
 
+    public GameObject titleCanvas;
     public GameObject playCanvas;
     public GameObject explanationCanvas;
 
@@ -25,6 +26,9 @@ public class GameLogic2 : MonoBehaviour {
 
     public TextMeshProUGUI timeText; //time text pro UGUI
     public TextMeshProUGUI scoreText; //score text pro UGUI
+
+    public TextMeshProUGUI normalScoreText;
+    public TextMeshProUGUI comparisonScoreText;
 
     public GameObject parkSign; // info screen sign
     public GameObject[] canvasObjs; //all canvas gameobjects
@@ -64,11 +68,12 @@ public class GameLogic2 : MonoBehaviour {
         //show park sign
         parkSign.SetActive(true); //sign play button starts gameNormal
 
-        //show explanation canvas
+        //show title canvas
         canvasObjs[0].SetActive(true);
         canvasObjs[1].SetActive(false);
         canvasObjs[2].SetActive(false);
         canvasObjs[3].SetActive(false);
+        canvasObjs[4].SetActive(false);
     }
 
     public void gameNormal()
@@ -116,6 +121,9 @@ public class GameLogic2 : MonoBehaviour {
         scoreSign.SetActive(true);
         timeSign.SetActive(true);
 
+        //updated scoreboard
+        UpdateScore();
+
         //turn on protanopia vision
         Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
         colorblindsetting.Type = 2;
@@ -141,7 +149,7 @@ public class GameLogic2 : MonoBehaviour {
         //turn onpark sign
         parkSign.SetActive(true);
 
-        //turn on score sign
+        //turn off score sign
         scoreSign.SetActive(false);
         timeSign.SetActive(false);
 
@@ -152,8 +160,11 @@ public class GameLogic2 : MonoBehaviour {
             //show red-green canvas
             canvasObjs[0].SetActive(false);
             canvasObjs[1].SetActive(false);
-            canvasObjs[2].SetActive(true);
-            canvasObjs[3].SetActive(false);
+            canvasObjs[2].SetActive(false);
+            canvasObjs[3].SetActive(true);
+            canvasObjs[4].SetActive(false);
+
+            normalScoreText.SetText("Great job! You scored: " + normalScore);
         }
         else if (endedLevel == 2)
         {
@@ -163,11 +174,15 @@ public class GameLogic2 : MonoBehaviour {
             canvasObjs[0].SetActive(false);
             canvasObjs[1].SetActive(false);
             canvasObjs[2].SetActive(false);
-            canvasObjs[3].SetActive(true);
+            canvasObjs[3].SetActive(false);
+            canvasObjs[4].SetActive(true);
 
             //turn on normal vision
             Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
             colorblindsetting.Type = 0;
+
+            //show score comparison
+            comparisonScoreText.SetText("Normal Score:{0}	Colorblind Score:{1}", normalScore, colorblindScore);
         }
     }
 
@@ -234,7 +249,12 @@ public class GameLogic2 : MonoBehaviour {
 
     public void NextSlide(string slideName)
     {
-        if (slideName == "PlaySlide")
+        if(slideName == "ExplanationSlide")
+        {
+            titleCanvas.SetActive(false);
+            explanationCanvas.SetActive(true);
+        }
+        else if (slideName == "PlaySlide")
         {
             explanationCanvas.SetActive(false);
             playCanvas.SetActive(true);
