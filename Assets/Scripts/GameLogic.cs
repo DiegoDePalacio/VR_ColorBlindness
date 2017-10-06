@@ -10,6 +10,8 @@ public class GameLogic : MonoBehaviour
     private int ripeApples; //total ripe apples
     private int collectedApples; //ripe apples collected
 
+    public int fractionOfApples;
+
     //public Transform[] spawnPoints;
     public GameObject ripeApple;
     public GameObject unripeApple;
@@ -59,7 +61,7 @@ public class GameLogic : MonoBehaviour
         if (gameRunning == true)
         {
             DecreaseTime();
-            if(collectedApples > ripeApples / 3) // if the player has collected more than 1/3 of the red apples, switch the colorblind setting to 2: Deuteranopia
+            if(collectedApples > ripeApples / fractionOfApples) // if the player has collected more than 1/3 of the red apples, switch the colorblind setting to 2: Deuteranopia
             {
                 // colorBlindSetting.Type = Mathf.RoundToInt(Random.Range(0.0f, 3.0f));
                 colorBlindSetting.Type = 2;
