@@ -627,6 +627,36 @@ Prefab:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 6c8f70d0190ac9e4f9df53452d09d518, type: 3}
+    - target: {fileID: 20036051075326854, guid: be1692d9f7dc47843869e615e057fdc5,
+        type: 2}
+      propertyPath: m_BackGroundColor.r
+      value: 0.121568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 20036051075326854, guid: be1692d9f7dc47843869e615e057fdc5,
+        type: 2}
+      propertyPath: m_BackGroundColor.g
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 20036051075326854, guid: be1692d9f7dc47843869e615e057fdc5,
+        type: 2}
+      propertyPath: m_BackGroundColor.b
+      value: 0.85098046
+      objectReference: {fileID: 0}
+    - target: {fileID: 20036051075326854, guid: be1692d9f7dc47843869e615e057fdc5,
+        type: 2}
+      propertyPath: m_ClearFlags
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 20036051075326854, guid: be1692d9f7dc47843869e615e057fdc5,
+        type: 2}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114399620400046142, guid: be1692d9f7dc47843869e615e057fdc5,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: be1692d9f7dc47843869e615e057fdc5, type: 2}
   m_IsPrefabParent: 0
@@ -7179,6 +7209,16 @@ Prefab:
       propertyPath: canvasObjs.Array.size
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindTextures.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4083783865143612, guid: 20c0e4c01532e004a92672d5fefb39a9, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -7387,6 +7427,241 @@ Prefab:
       propertyPath: comparisonScoreText
       value: 
       objectReference: {fileID: 1432731543}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindTextures.Array.data[0].mat
+      value: 
+      objectReference: {fileID: 2100000, guid: af3df61b80821434cadc0f9d85761459, type: 2}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindTextures.Array.data[0].normal
+      value: 
+      objectReference: {fileID: 2800000, guid: de791b2eba87e2a42affc233a827fa2a, type: 3}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindTextures.Array.data[0].protanopia
+      value: 
+      objectReference: {fileID: 2800000, guid: 0c57918e3f395c04791e630762949a48, type: 3}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].mat
+      value: 
+      objectReference: {fileID: 2100000, guid: f46b50b00754a5740ac424a65496b1fd, type: 2}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].mat
+      value: 
+      objectReference: {fileID: 2100000, guid: 68518f1a9be6ec14b9d7d9d36d74f6e1, type: 2}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].mat
+      value: 
+      objectReference: {fileID: 2100000, guid: 4e2154c0ac08bc04db282727bd08f53b, type: 2}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].mat
+      value: 
+      objectReference: {fileID: 2100000, guid: 1a11af98c9ede9f4fae506f0afe25e47, type: 2}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].normal.r
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].normal.g
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].normal.b
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].normal.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].normal.r
+      value: 0.3137255
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].normal.g
+      value: 0.7254902
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].normal.b
+      value: 0.32156864
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].normal.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].normal.r
+      value: 0.5294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].normal.g
+      value: 0.11764706
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].normal.b
+      value: 0.101960786
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].normal.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].normal.r
+      value: 0.15294118
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].normal.g
+      value: 0.40392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].normal.b
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].normal.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].protanopia.r
+      value: 0.7803922
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].protanopia.g
+      value: 0.4784314
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].protanopia.b
+      value: 0.14117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[0].protanopia.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].protanopia.r
+      value: 0.7019608
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].protanopia.g
+      value: 0.43137258
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].protanopia.b
+      value: 0.22352943
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[1].protanopia.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].protanopia.r
+      value: 0.41176474
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].protanopia.g
+      value: 0.2627451
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].protanopia.b
+      value: 0.07058824
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[2].protanopia.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].protanopia.r
+      value: 0.37647063
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].protanopia.g
+      value: 0.2392157
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].protanopia.b
+      value: 0.14117648
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: matColorblindColors.Array.data[3].protanopia.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorNormal.r
+      value: 0.121568635
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorNormal.g
+      value: 0.5686275
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorNormal.b
+      value: 0.85098046
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorNormal.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorProtanopia.r
+      value: 0.47058827
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorProtanopia.g
+      value: 0.47058827
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorProtanopia.b
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 114857299834543766, guid: 20c0e4c01532e004a92672d5fefb39a9,
+        type: 2}
+      propertyPath: skyColorProtanopia.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114106072263090648, guid: 20c0e4c01532e004a92672d5fefb39a9, type: 2}
     - {fileID: 114120570953105988, guid: 20c0e4c01532e004a92672d5fefb39a9, type: 2}

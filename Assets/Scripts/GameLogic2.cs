@@ -3,6 +3,55 @@ using System.Collections.Generic;
 using UnityEngine;
 using Wilberforce;
 using TMPro;
+using System;
+
+public enum VisionType
+{
+    NORMAL,
+    PROTANOPIA
+}
+
+[Serializable]
+public class ColorBlindMaterialColorConfig
+{
+    public Material mat;
+    public Color normal;
+    public Color protanopia;
+
+    public void SetVision( VisionType visionType )
+    {
+        switch ( visionType )
+        {
+            case VisionType.NORMAL:
+            mat.color = normal;
+            break;
+            case VisionType.PROTANOPIA:
+            mat.color = protanopia;
+            break;
+        }
+    }
+}
+
+[Serializable]
+public class ColorBlindMaterialTextureConfig
+{
+    public Material mat;
+    public Texture normal;
+    public Texture protanopia;
+
+    public void SetVision( VisionType visionType )
+    {
+        switch ( visionType )
+        {
+            case VisionType.NORMAL:
+            mat.mainTexture = normal;
+            break;
+            case VisionType.PROTANOPIA:
+            mat.mainTexture = protanopia;
+            break;
+        }
+    }
+}
 
 public class GameLogic2 : MonoBehaviour {
 
@@ -44,6 +93,12 @@ public class GameLogic2 : MonoBehaviour {
     public float timeRemaining; //length of timer
 
     public int level = 0;
+
+    public List<ColorBlindMaterialTextureConfig> matColorblindTextures;
+    public List<ColorBlindMaterialColorConfig> matColorblindColors;
+
+    public Color skyColorNormal;
+    public Color skyColorProtanopia;
 
     //private vars
     private AudioSource yuck;
@@ -125,8 +180,9 @@ public class GameLogic2 : MonoBehaviour {
         UpdateScore();
 
         //turn on protanopia vision
-        Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
-        colorblindsetting.Type = 2;
+        SetVision( VisionType.PROTANOPIA );
+        //Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
+        //colorblindsetting.Type = 2;
 
         gameRunning = true;
         level++;
@@ -178,8 +234,9 @@ public class GameLogic2 : MonoBehaviour {
             canvasObjs[4].SetActive(true);
 
             //turn on normal vision
-            Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
-            colorblindsetting.Type = 0;
+            SetVision( VisionType.NORMAL );
+            //Colorblind colorblindsetting = mainCamera.GetComponent<Colorblind>();
+            //colorblindsetting.Type = 0;
 
             //show score comparison
             comparisonScoreText.SetText("Normal Score:{0}	Colorblind Score:{1}", normalScore, colorblindScore);
@@ -273,5 +330,28 @@ public class GameLogic2 : MonoBehaviour {
     public void OpenLink(string link)
     {
         Application.OpenURL(link);
+    }
+
+    private void SetVision( VisionType visionType )
+    {
+        foreach ( ColorBlindMaterialColorConfig matColorblindColor in matColorblindColors )
+        {
+            matColorblindColor.SetVision( visionType );
+        }
+
+        foreach ( ColorBlindMaterialTextureConfig matColorblindTexture in matColorblindTextures )
+        {
+            matColorblindTexture.SetVision( visionType );
+        }
+
+        switch ( visionType )
+        {
+            case VisionType.NORMAL:
+                mainCamera.backgroundColor = skyColorNormal;
+                break;
+            case VisionType.PROTANOPIA:
+                mainCamera.backgroundColor = skyColorProtanopia;
+                break;
+        }
     }
 }
