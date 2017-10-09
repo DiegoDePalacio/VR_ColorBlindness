@@ -116,6 +116,9 @@ public class GameLogic2 : MonoBehaviour {
     {
         level = 0;
 
+        //turn on normal vision
+        SetVision(VisionType.NORMAL);
+
         //disable timer/score signs
         scoreSign.SetActive(false);
         timeSign.SetActive(false);
